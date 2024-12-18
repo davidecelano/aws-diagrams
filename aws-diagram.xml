@@ -6,56 +6,56 @@
         <mxCell id="1" parent="0" />
         
         <!-- VPC -->
-        <mxCell id="vpcMain" value="VPC" style="shape=mxgraph.aws4.group;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="vpcMain" value="VPC" style="shape=mxgraph.aws4.vpc;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="20" y="20" width="780" height="1120" as="geometry" />
         </mxCell>
         
         <!-- Availability Zones -->
-        <mxCell id="az1" value="AZ 1" style="shape=mxgraph.aws4.group;whiteSpace=wrap;html=1;" vertex="1" parent="vpcMain">
+        <mxCell id="az1" value="AZ 1" style="shape=mxgraph.aws4.availability_zone;whiteSpace=wrap;html=1;" vertex="1" parent="vpcMain">
           <mxGeometry x="40" y="40" width="340" height="1040" as="geometry" />
         </mxCell>
-        <mxCell id="az2" value="AZ 2" style="shape=mxgraph.aws4.group;whiteSpace=wrap;html=1;" vertex="1" parent="vpcMain">
+        <mxCell id="az2" value="AZ 2" style="shape=mxgraph.aws4.availability_zone;whiteSpace=wrap;html=1;" vertex="1" parent="vpcMain">
           <mxGeometry x="400" y="40" width="340" height="1040" as="geometry" />
         </mxCell>
         
         <!-- Subnets -->
-        <mxCell id="frontendSubnetAz1" value="Frontend Subnet AZ 1" style="shape=mxgraph.aws4.group;whiteSpace=wrap;html=1;" vertex="1" parent="az1">
+        <mxCell id="frontendSubnetAz1" value="Frontend Subnet AZ 1" style="shape=mxgraph.aws4.subnet;whiteSpace=wrap;html=1;" vertex="1" parent="az1">
           <mxGeometry x="20" y="20" width="300" height="480" as="geometry" />
         </mxCell>
-        <mxCell id="backendSubnetAz1" value="Backend Subnet AZ 1" style="shape=mxgraph.aws4.group;whiteSpace=wrap;html=1;" vertex="1" parent="az1">
+        <mxCell id="backendSubnetAz1" value="Backend Subnet AZ 1" style="shape=mxgraph.aws4.subnet;whiteSpace=wrap;html=1;" vertex="1" parent="az1">
           <mxGeometry x="20" y="520" width="300" height="480" as="geometry" />
         </mxCell>
-        <mxCell id="frontendSubnetAz2" value="Frontend Subnet AZ 2" style="shape=mxgraph.aws4.group;whiteSpace=wrap;html=1;" vertex="1" parent="az2">
+        <mxCell id="frontendSubnetAz2" value="Frontend Subnet AZ 2" style="shape=mxgraph.aws4.subnet;whiteSpace=wrap;html=1;" vertex="1" parent="az2">
           <mxGeometry x="20" y="20" width="300" height="480" as="geometry" />
         </mxCell>
-        <mxCell id="backendSubnetAz2" value="Backend Subnet AZ 2" style="shape=mxgraph.aws4.group;whiteSpace=wrap;html=1;" vertex="1" parent="az2">
+        <mxCell id="backendSubnetAz2" value="Backend Subnet AZ 2" style="shape=mxgraph.aws4.subnet;whiteSpace=wrap;html=1;" vertex="1" parent="az2">
           <mxGeometry x="20" y="520" width="300" height="480" as="geometry" />
         </mxCell>
         
         <!-- EC2 Instances -->
-        <mxCell id="frontendEc2Az1" value="Frontend EC2 AZ 1" style="shape=mxgraph.aws4.compute;whiteSpace=wrap;html=1;" vertex="1" parent="frontendSubnetAz1">
+        <mxCell id="frontendEc2Az1" value="Frontend EC2 AZ 1" style="shape=mxgraph.aws4.ec2_instance;whiteSpace=wrap;html=1;" vertex="1" parent="frontendSubnetAz1">
           <mxGeometry x="100" y="200" width="100" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="backendEc2Az1" value="Backend EC2 AZ 1" style="shape=mxgraph.aws4.compute;whiteSpace=wrap;html=1;" vertex="1" parent="backendSubnetAz1">
+        <mxCell id="backendEc2Az1" value="Backend EC2 AZ 1" style="shape=mxgraph.aws4.ec2_instance;whiteSpace=wrap;html=1;" vertex="1" parent="backendSubnetAz1">
           <mxGeometry x="100" y="200" width="100" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="frontendEc2Az2" value="Frontend EC2 AZ 2" style="shape=mxgraph.aws4.compute;whiteSpace=wrap;html=1;" vertex="1" parent="frontendSubnetAz2">
+        <mxCell id="frontendEc2Az2" value="Frontend EC2 AZ 2" style="shape=mxgraph.aws4.ec2_instance;whiteSpace=wrap;html=1;" vertex="1" parent="frontendSubnetAz2">
           <mxGeometry x="100" y="200" width="100" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="backendEc2Az2" value="Backend EC2 AZ 2" style="shape=mxgraph.aws4.compute;whiteSpace=wrap;html=1;" vertex="1" parent="backendSubnetAz2">
+        <mxCell id="backendEc2Az2" value="Backend EC2 AZ 2" style="shape=mxgraph.aws4.ec2_instance;whiteSpace=wrap;html=1;" vertex="1" parent="backendSubnetAz2">
           <mxGeometry x="100" y="200" width="100" height="60" as="geometry" />
         </mxCell>
         
         <!-- Elastic Load Balancers -->
-        <mxCell id="frontendElb" value="Frontend ELB" style="shape=mxgraph.aws4.networking;whiteSpace=wrap;html=1;" vertex="1" parent="vpcMain">
+        <mxCell id="frontendElb" value="Frontend ELB" style="shape=mxgraph.aws4.elb;whiteSpace=wrap;html=1;" vertex="1" parent="vpcMain">
           <mxGeometry x="340" y="20" width="100" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="backendElb" value="Backend ELB" style="shape=mxgraph.aws4.networking;whiteSpace=wrap;html=1;" vertex="1" parent="vpcMain">
+        <mxCell id="backendElb" value="Backend ELB" style="shape=mxgraph.aws4.elb;whiteSpace=wrap;html=1;" vertex="1" parent="vpcMain">
           <mxGeometry x="340" y="520" width="100" height="60" as="geometry" />
         </mxCell>
         
         <!-- RDS PostgreSQL -->
-        <mxCell id="rdsPostgresql" value="RDS PostgreSQL" style="shape=mxgraph.aws4.database;whiteSpace=wrap;html=1;" vertex="1" parent="backendSubnetAz1">
+        <mxCell id="rdsPostgresql" value="RDS PostgreSQL" style="shape=mxgraph.aws4.rds_postgresql;whiteSpace=wrap;html=1;" vertex="1" parent="backendSubnetAz1">
           <mxGeometry x="100" y="400" width="100" height="60" as="geometry" />
         </mxCell>
         
